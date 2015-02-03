@@ -1,11 +1,24 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="edu.stanford.riedel_kruse.bioticgamesexamples">
+<manifest
+    package="edu.stanford.riedel_kruse.bioticgamesexamples"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application android:allowBackup="true"
-                 android:label="@string/app_name"
-                 android:icon="@drawable/ic_launcher"
-                 android:theme="@style/AppTheme">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+
+        <activity
+            android:name=".SoccerGameActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
