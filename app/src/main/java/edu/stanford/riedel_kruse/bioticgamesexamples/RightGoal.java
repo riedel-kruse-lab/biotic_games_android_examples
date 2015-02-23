@@ -10,13 +10,13 @@ import edu.stanford.riedel_kruse.bioticgamessdk.Rectangle;
  * Created by dchiu on 2/2/15.
  */
 public class RightGoal extends CompositeShape {
-    public RightGoal(Point position, int goalWidth, int goalLength, Scalar color) {
+    public RightGoal(Point position, int goalWidth, int goalHeight, Scalar color) {
         super(position);
-        Rectangle back = new Rectangle(new Point(0, 0), goalWidth, goalLength, color, -1, true);
-        Rectangle top = new Rectangle(new Point(-goalLength / 4 + goalWidth, 0), goalLength / 4, goalWidth,
+        Rectangle back = new Rectangle(new Point(0, 0), goalWidth, goalHeight, color, -1, true);
+        Rectangle top = new Rectangle(new Point(-goalHeight / 4 + goalWidth, 0), goalHeight / 4, goalWidth,
                 color, -1, false);
-        Rectangle bottom = new Rectangle(new Point(-goalLength / 4 + goalWidth, goalLength - goalWidth),
-                goalLength / 4, goalWidth, color, -1, false);
+        Rectangle bottom = new Rectangle(new Point(-goalHeight / 4 + goalWidth, goalHeight - goalWidth),
+                goalHeight / 4, goalWidth, color, -1, false);
 
         addChild(back);
         addChild(top);
